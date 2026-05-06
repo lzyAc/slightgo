@@ -11,8 +11,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/hetao29/slightgo"
-	"github.com/hetao29/slightgo/middleware"
+	"github.com/lzyAc/slightgo"
+	"github.com/lzyAc/slightgo/middleware"
 )
 
 // ---------------------------------------------------------------------------

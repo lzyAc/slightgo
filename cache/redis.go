@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	sredis "github.com/hetao29/slightgo/redis"
+	sredis "github.com/lzyAc/slightgo/redis"
 )
 
 // RedisCache 是基于 Redis 的缓存实现

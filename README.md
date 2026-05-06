@@ -4,6 +4,7 @@
 
 [![Go Version](https://img.shields.io/badge/Go-1.22+-blue)](https://golang.org)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![GitHub](https://img.shields.io/badge/GitHub-lzyAc%2Fslightgo-blue)](https://github.com/lzyAc/slightgo)
 
 ---
 
@@ -35,7 +36,7 @@ http://localhost:8080/{zone}/{page}/{entry}
 ### 安装
 
 ```bash
-go get github.com/hetao29/slightgo
+go get github.com/lzyAc/slightgo
 ```
 
 ### Hello World
@@ -43,7 +44,7 @@ go get github.com/hetao29/slightgo
 ```go
 package main
 
-import "github.com/hetao29/slightgo"
+import "github.com/lzyAc/slightgo"
 
 type IndexPage struct{}
 
@@ -68,8 +69,8 @@ func main() {
 package main
 
 import (
-	"github.com/hetao29/slightgo"
-	"github.com/hetao29/slightgo/middleware"
+	"github.com/lzyAc/slightgo"
+	"github.com/lzyAc/slightgo/middleware"
 )
 
 type UserPage struct{}
@@ -185,7 +186,7 @@ ctx.InPath               // URL 路径段数组
 ### 数据库 (读写分离)
 
 ```go
-import "github.com/hetao29/slightgo/db"
+import "github.com/lzyAc/slightgo/db"
 
 cfg := &db.Config{
     Driver: "mysql",
@@ -209,8 +210,8 @@ database.Transaction(func(tx *sql.Tx) error {
 
 ```go
 import (
-    "github.com/hetao29/slightgo/cache"
-    "github.com/hetao29/slightgo/redis"
+    "github.com/lzyAc/slightgo/cache"
+    "github.com/lzyAc/slightgo/redis"
 )
 
 // 内存缓存
@@ -229,7 +230,7 @@ rc.Set("key", "value", 5*time.Minute)
 ### 模板引擎
 
 ```go
-import "github.com/hetao29/slightgo/tpl"
+import "github.com/lzyAc/slightgo/tpl"
 
 engine := tpl.New(tpl.WithDir("templates"), tpl.WithExt(".html"))
 
@@ -247,7 +248,7 @@ html, _ = engine.Render("greeting", "Hello, {{.name}}!", map[string]interface{}{
 ### 自定义路由 (SRoute)
 
 ```go
-import "github.com/hetao29/slightgo/route"
+import "github.com/lzyAc/slightgo/route"
 
 r := route.New()
 r.Get("/user/:id", func(w http.ResponseWriter, req *http.Request) {
@@ -259,7 +260,7 @@ r.Post("/api/create", handler)
 ### 中间件
 
 ```go
-import "github.com/hetao29/slightgo/middleware"
+import "github.com/lzyAc/slightgo/middleware"
 
 app.Use(middleware.Logger)    // 请求日志
 app.Use(middleware.Recovery)  // Panic 恢复
@@ -269,7 +270,7 @@ app.Use(middleware.CORS(nil)) // 跨域支持
 ### 配置
 
 ```go
-import "github.com/hetao29/slightgo/config"
+import "github.com/lzyAc/slightgo/config"
 
 // 加载 JSON 配置文件
 config.Load("config.json")
@@ -318,5 +319,6 @@ MIT License
 
 ## 相关链接
 
+- [SlightGo GitHub](https://github.com/lzyAc/slightgo)
 - [SlightPHP (PHP 原版)](https://github.com/hetao29/slightphp)
 - [Go 标准库](https://golang.org/pkg/)

@@ -1,7 +1,7 @@
 package slightgo
 
 import (
-	"github.com/hetao29/slightgo/config"
+	"github.com/lzyAc/slightgo/config"
 )
 
 // Config 是对 config.Config 的封装，方便从 slightgo 包直接访问

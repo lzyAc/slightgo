@@ -1,4 +1,4 @@
-module github.com/hetao29/slightgo
+module github.com/lzyAc/slightgo
 
 go 1.22
 
